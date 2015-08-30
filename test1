@@ -1,0 +1,6 @@
+Enter file contents here
+ALTER TABLE `t_activity` MODIFY COLUMN `isClick`  varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '1' COMMENT '1,表示不可点击  2、 表示可点击' AFTER `activityNO`;
+ALTER TABLE `t_activity` MODIFY COLUMN `isShowTime`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '1' COMMENT '是否显示底部时间  0代表不显示，1代表显示' AFTER `isClick`;
+ALTER TABLE `t_activity` MODIFY COLUMN `publishTime`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '发布时间' AFTER `isShowTime`;
+ALTER TABLE `t_activity` MODIFY COLUMN `type`  varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '1-抽奖 2-抢购 3-礼包' AFTER `publishTime`;
+ALTER TABLE `t_activity` MODIFY COLUMN `isShow`  varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '0' COMMENT '是否发布 0 代表不发布 1 代表发布' AFTER `type`;
